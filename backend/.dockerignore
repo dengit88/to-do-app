@@ -1,0 +1,13 @@
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+db.sqlite3
+staticfiles/
+.git/
+.vscode/
+.idea/
+powershell.cmd
+init_db.ps1

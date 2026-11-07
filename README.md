@@ -113,6 +113,8 @@ docker compose up --build
 - **Frontend Application:** [http://localhost:5173](http://localhost:5173)
 - **Django REST API:** [http://localhost:8000/api/todos/](http://localhost:8000/api/todos/)
 - **Django Admin:** [http://localhost:8000/admin/](http://localhost:8000/admin/)
+  - **Username:** `admin`
+  - **Password:** `Admin@12345`
 - **PostgreSQL Database:** `localhost:5432` (`db: todo_db`, `user: postgres`, `password: postgres`)
 
 To stop all services:
@@ -187,10 +189,11 @@ docker compose down -v
    python manage.py migrate
    ```
 
-6. *(Optional)* Create a superuser to access the Django admin panel:
+6. Create or update the default superuser (`admin` / `Admin@12345`):
    ```bash
-   python manage.py createsuperuser
+   python manage.py init_admin
    ```
+   *(Or interactively using `python manage.py createsuperuser`)*
 
 7. Start the Django development server:
    ```bash
